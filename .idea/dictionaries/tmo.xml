@@ -1,7 +1,9 @@
 <component name="ProjectDictionaryState">
   <dictionary name="tmo">
     <words>
+      <w>bcrypt</w>
       <w>cors</w>
+      <w>eralchemy</w>
       <w>sqlalchemy</w>
       <w>werkzeug</w>
     </words>

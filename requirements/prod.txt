@@ -3,10 +3,11 @@
 
 # TODO specify versions!
 
-werkzeug
 flask
+flask-bcrypt
 flask-sqlalchemy
 flask-migrate
 flask-cors
-flask-testing
-ERAlchemy
+flask-jwt-extended
+eralchemy
+werkzeug

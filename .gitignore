@@ -105,3 +105,7 @@ venv.bak/
 
 # PyCharm
 .idea
+.idea/*
+
+# Misc
+requirements_versions.txt
