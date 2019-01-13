@@ -9,7 +9,7 @@ from flask_migrate import Migrate
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
 
-db = SQLAlchemy()  # TODO model_class, query_class, etc...
+db = SQLAlchemy()
 migrate = Migrate()
 bcrypt = Bcrypt()
 cors = CORS()

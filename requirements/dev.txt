@@ -10,3 +10,4 @@ flask-testing
 pytest
 coverage
 factory-boy
+ipython
