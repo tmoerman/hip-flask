@@ -1,0 +1,12 @@
+# Dependencies needed in production.
+# Installation: `pip install -r requirements/prod.txt`
+
+# TODO specify versions!
+
+werkzeug
+flask
+flask-sqlalchemy
+flask-migrate
+flask-cors
+flask-testing
+ERAlchemy

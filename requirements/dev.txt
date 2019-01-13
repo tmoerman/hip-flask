@@ -1,0 +1,11 @@
+# Dependencies needed in development in addition to the production requirements.
+# Installation: `pip install -r requirements/dev.txt`
+
+# reference to production requirements
+-r prod.txt
+
+# TODO specify versions
+
+flask-testing
+pytest
+coverage
