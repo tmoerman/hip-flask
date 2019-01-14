@@ -4,6 +4,7 @@
       <w>bcrypt</w>
       <w>cors</w>
       <w>eralchemy</w>
+      <w>pytest</w>
       <w>sqlalchemy</w>
       <w>werkzeug</w>
     </words>

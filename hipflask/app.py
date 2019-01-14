@@ -5,11 +5,11 @@ The app factory module. Contains the app factory function.
 from flask import Flask
 
 from . import user, analysis
-from .config import Config, ProdConfig
+from .settings import Config, ProdConfig
 from .extensions import db, migrate, bcrypt
 
 
-def create_app(config: Config = ProdConfig) -> Flask:
+def create_app(config = ProdConfig) -> Flask:
     """
     Application factory function.
     :param config: the configuration object to use.

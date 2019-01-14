@@ -2,27 +2,27 @@
 User models.
 """
 
-from hipflask.database import db, Model, IntIdMixin
+from hipflask.database import db, Model, IntIdMixin, CRUDMixin
 from hipflask.extensions import bcrypt
 
 
-class User(Model, IntIdMixin):
+class User(IntIdMixin, CRUDMixin, Model):
     # main fields
-    user_name = db.Column(db.String(64), index=True, unique=True, nullable=False)
+    username = db.Column(db.String(64), index=True, unique=True, nullable=False)
     email = db.Column(db.String(120), index=True, unique=True, nullable=False)
     password_hash = db.Column(db.Binary(128), nullable=False)
 
     # orm derived fields
 
     def __init__(self,
-                 user_name: str,
+                 username: str,
                  email: str,
                  password: str,
                  **kwargs):
         assert password.strip(), "Password cannot be blank or None."
 
         db.Model.__init__(self,
-                          user_name=user_name,
+                          username=username,
                           email=email,
                           **kwargs)
 
@@ -35,4 +35,4 @@ class User(Model, IntIdMixin):
         return bcrypt.check_password_hash(self.password_hash, password)
 
     def __repr__(self) -> str:
-        return f'<User {self.user_name}>'
+        return f'<User {self.username}>'
