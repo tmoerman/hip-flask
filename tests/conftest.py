@@ -5,13 +5,10 @@ Fixtures for unit tests.
 import pytest
 
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 
 from hipflask.app import create_app
 from hipflask.database import db as _db
 from hipflask.settings import TestConfig
-
-from typing import Generator
 
 
 @pytest.fixture(scope='function')

@@ -2,12 +2,14 @@
 Database module.
 """
 
+from sqlalchemy.orm import relationship
 from .extensions import db
 
 # Aliases
 Column = db.Column
 Model = db.Model
 ID = int
+relationship = relationship
 
 
 class CRUDMixin(object):
@@ -44,5 +46,9 @@ class CRUDMixin(object):
         return commit and db.session.commit()
 
 
-class IntIdMixin(Model):
+class IntIdMixin(object):
     id: ID = db.Column(db.Integer, primary_key=True)
+
+
+def as_id(model: IntIdMixin) -> ID:
+    return model if isinstance(model, ID) else model.id

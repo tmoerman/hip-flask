@@ -3,9 +3,9 @@ Module containing model factories for testing.
 """
 
 from factory.alchemy import SQLAlchemyModelFactory
-from factory import Sequence, PostGenerationMethodCall
+from factory import Sequence
 
-from hipflask.database import db, ID
+from hipflask.database import db
 from hipflask.user.models import User
 
 
@@ -22,4 +22,3 @@ class UserFactory(BaseFactory):
     username = Sequence(lambda id: f'user_{id})')
     email = Sequence(lambda id: f'user_{id}@company.com')
     password = Sequence(lambda id: f'pwd_{id}')
-
